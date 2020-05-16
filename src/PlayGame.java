@@ -77,7 +77,7 @@ public class PlayGame extends JFrame {
 		/* Size of the game board */
 		int size = Integer.parseInt(args[0]);
 
-		/* Number of positions on the boart that must remain empty */
+		/* Number of positions on the board that must remain empty */
 		int empty = Integer.parseInt(args[1]);
 
 		/* Number of positions marked by the same player in the same row, 
@@ -125,7 +125,7 @@ public class PlayGame extends JFrame {
 				PosPlay pos;
 
 				if (game_ended) System.exit(0);
-				/* Find out which position was selected by th eplayer */
+				/* Find out which position was selected by the player */
 				for (int i = 0; i < board_size; i++) {
 					for (int j = 0; j < board_size; j++)
 						if(event.getSource() == gameDisplay[i][j]) {
@@ -206,8 +206,6 @@ public class PlayGame extends JFrame {
 										[pos.getRow()][pos.getCol()].getGraphics());
 							}
 							else {
-								// Shift tiles
-								int empty_row = -1, empty_col = -1;
 
 								// Make the computer's move
 
